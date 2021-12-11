@@ -40,7 +40,7 @@ function Main(){
             <H2>
                 메인타이틀
             </H2>
-            
+                      
             <Div>
                 내용
             </Div>
