@@ -1,5 +1,14 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const rotationAnime = keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+`;
 
 const Container = styled.div`
     display:flex;
@@ -8,7 +17,7 @@ const Container = styled.div`
 `;
 
 const Div = styled.div`
-    margin:0 auto
+    margin:0 auto;
 `;
 
 const H1 = styled.h1``;
@@ -34,15 +43,23 @@ const Footer = styled.div`
     justify-content: space-between;
 `;
 
+const Box = styled.div`
+    width:100px;
+    height:100px;
+    background-color:green;
+    animation: ${rotationAnime} 1s linear infinite;
+`;
+
+
 function Main(){
     return(
         <Container as='section'>
             <H2>
                 메인타이틀
             </H2>
-                      
+
             <Div>
-                내용
+                <Box />
             </Div>
             <Footer>
                 푸터
